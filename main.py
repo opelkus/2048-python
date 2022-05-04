@@ -80,14 +80,14 @@ def gen_sqrt(coord,type,value,offset=(0,0)):
     cyl(screen,(poz[0]+szer_ram,poz[1]+szer_ram,szer_kl,szer_kl),hexx(kolor[0]))
     font = pygame.font.SysFont("comicsansms", 20)
     color=(255,0,255)
-    text = font.render(str(value), False, color)
+    text = font.render(str(int(value)), False, color)
     screen.blit(text,((poz[0]+szer_ram+szer_kl/2-text.get_width()/2,poz[1]+szer_ram+szer_kl/2-text.get_height()/2)))
 
 def refresh_board(board):
     gen_ramki()
     for iy in range(len(board)):
         for ix in range(len(board[0])):
-            gen_sqrt((ix,iy),1,board[0][0])
+            gen_sqrt((ix,iy),1,board[iy][ix])
 
 
 def gen_ramki(offset=(0,0)):
