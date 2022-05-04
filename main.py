@@ -7,6 +7,10 @@ from pygame.locals import *
 
 Data=under.Data()
 
+
+
+
+
 screen = pygame.display.set_mode((1280,720),HWSURFACE|DOUBLEBUF|RESIZABLE)
 
 pygame.display.set_caption('moje 2048')
